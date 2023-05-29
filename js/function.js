@@ -1,4 +1,5 @@
-
+const textarea = document.getElementById("text");
+const resultHtml = document.getElementById("result");
 /**
  * 
  * La letra "e" es convertida para "enter"
@@ -10,43 +11,38 @@ La letra "u" es convertida para "ufat"
  * 
 */
 function encriptar(){
-    console.log("encriptando");
-    let text = document.getElementById("text").value.toLowerCase();
+    let text = textarea.value.toLowerCase();
     if(text == '') return;
-    let newText = '';
-    for (const position in text) {
-        switch (text[position]) {
-            case 'e':
-                newText += 'enter';
-                break;
-            case 'i':
-                newText += 'imes';
-                break;
-            case 'a':
-                newText += 'ai';
-                break;
-            case 'o':
-                newText += 'ober';
-                break;
-            case 'u':
-                newText += 'ufat';
-                break;
-            default:
-                newText += text[position];
-                break;
-        }
+    const keys = ['e', 'i', 'a', 'o', 'u'];
+    const resultKeys = ['enter', 'imes', 'ai', 'ober', 'ufat'];
+    for (const position in keys) {
+       text = text.replaceAll(keys[position], resultKeys[position]);
     }
     document.getElementById("message").style.display = "none";
-    let resultHtml = document.getElementById("result");
-    resultHtml.style.display = "block";
-    resultHtml.innerText = newText;
+    document.getElementById("container-result").style.display = "block";
+    resultHtml.innerHTML = text;
 
-    console.log("RESULTADO FINAL: " + newText);
+    console.log("RESULTADO FINAL: " + text);
 
 }
 
 
 function desencriptar(){
-    console.log("desencriptando");
+    let text = textarea.value.toLowerCase();
+    if(text == '') return;
+    const keys = ['enter', 'imes', 'ai', 'ober', 'ufat'];
+    const resultKeys = ['e', 'i', 'a', 'o', 'u'];
+    for (const position in keys) {
+       text = text.replaceAll(keys[position], resultKeys[position]);
+    }
+    document.getElementById("message").style.display = "none";
+    document.getElementById("container-result").style.display = "block";
+    resultHtml.innerHTML = text;
+    console.log("RESULTADO FINAL: " + text);
 
+}
+
+function copy(){
+    resultHtml.select();
+    navigator.clipboard.writeText(resultHtml.value);
 }
