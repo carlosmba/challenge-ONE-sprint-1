@@ -16,11 +16,11 @@ main{
 
 .column{
     margin-top: 20px;
-    width: 30%;
+    width: 25%;
 }
 
 .column-text{
-    width: 60%;
+    width: 65%;
 }
 
 .column-logo{
@@ -54,8 +54,6 @@ main{
 .bg-result{
     background-color: white;
     border-radius: 20px;
-    -webkit-box-shadow: 0px 0px 17px 4px rgba(0,0,0,0.29);
-    -moz-box-shadow: 0px 0px 17px 4px rgba(0,0,0,0.29);
     box-shadow: 0px 0px 17px 4px rgba(0,0,0,0.29);
     width: 100%;
     height: 95%;
@@ -119,6 +117,34 @@ opacity: 0.8;
     padding: 25px 120px;
     color: white;
 }
+
+.button:hover{
+    background-color: #bbc0c569;
+    color: #0A3871;
+}
+
+.button-2{
+    background-color: transparent;
+    color: #0A3871;
+    margin-left: 1rem;
+}
+
+.result{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 150%;
+width: 300px;
+height: 95%;
+/* or 36px */
+
+
+/* Gray/gray-400 */
+
+color: #495057;
+}
+
 
 
 

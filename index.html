@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Challenge</title>
 </head>
 <body>
@@ -21,13 +21,14 @@
                 <p>Solo letras minúsculas y sin acento</p>
             </div>
             <div class="buttons">
-                <input type="button" value="Encriptar" class="button button-1">
-                <input type="button" value="Desencriptar" class="button button-2">
+                <input type="button" value="Encriptar" class="button button-1" onclick="encriptar()">
+                <input type="button" value="Desencriptar" class="button button-2" onclick="desencriptar()">
             </div>
         </div>
         <div class="column">
             <div class="bg-result">
-                <div class="center">
+                <p class="result" style="display: none;" id="result"></p>
+                <div class="center" id="message">
                     <img src="assets/img/muneco.png" alt="muñeco" class="muneco">
                     <p class="p-1">Ningún mensaje fue encontrado</p>
                     <p class="p-2">Ingresa el texto que desees encriptar o desencriptar</p>
@@ -37,5 +38,6 @@
         </div>
 
     </main>
+    <script src="js/function.js"></script>
 </body>
 </html>
